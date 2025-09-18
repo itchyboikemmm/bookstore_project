@@ -15,7 +15,7 @@ class AuthorAdmin(admin.ModelAdmin):
 @admin.register(Book)
 # register book
 class BookAdmin(admin.ModelAdmin):
-    list_display = ('title', 'author', 'category', 'price', 'is_featured', 'created_at')
+    list_display = ('title', 'author', 'category', 'price', 'is_best_seller', 'created_at')
     prepopulated_fields = {'slug': ('title',)}
-    list_filter = ('is_featured', 'category', 'author')
+    list_filter = ('is_best_seller', 'category', 'author')
     search_fields = ('title', 'author_name')
